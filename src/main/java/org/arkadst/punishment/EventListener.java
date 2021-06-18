@@ -35,7 +35,7 @@ public class EventListener implements Listener {
         Bukkit.getScheduler().runTaskAsynchronously(main, () -> {
             Component chat_message = event.originalMessage();
             for (String slur : Main.config.getStringList("slurs")){
-                if (chat_message.toString().toLowerCase(Locale.ROOT).contains(slur)){
+                if ((" " + chat_message + " ").toLowerCase(Locale.ROOT).contains(slur)){
 
                     Bukkit.getScheduler().runTask(main, () -> {
                         candidates_for_ban.putIfAbsent(player.getUniqueId(), 0);
@@ -69,6 +69,8 @@ public class EventListener implements Listener {
                             Bukkit.broadcast(LegacyComponentSerializer.legacyAmpersand().deserialize(message_to_others));
                             player.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize(message_to_player));
                         }
+
+                        Bukkit.getLogger().info(ChatColor.RED + player.getName() + "was punished for \"" + chat_message + "\".");
                     });
                     break;
                 }
