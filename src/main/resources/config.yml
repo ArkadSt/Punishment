@@ -1,0 +1,29 @@
+# in lower case!
+slurs:
+  - "nigga"
+  - "nigger"
+  - "niggur"
+  - "nigor"
+  - "nigre"
+  - "beaner"
+  - "dyke"
+  - "chink"
+  - "tranny"
+  - "trannie"
+  - "zhyd"
+  - "zhid"
+  - "kyke"
+  - "kike"
+  - "gook"
+
+message_to_others: "&c{player} was struck by lightning for racial slur."
+message_to_player: "&cNo racial slur! If you do this {until_ban} more times, you will be banned for {ban_expire_after} minutes."
+
+#
+ban_after: 3
+
+# Ban reason
+ban_reason: "&cYou fucked up"
+
+# In minutes
+ban_expire_after: 180

@@ -1,0 +1,14 @@
+name: Punishment
+author: ArkadSt
+version: 1.0
+main: org.arkadst.punishment.Main
+api-version: 1.16
+
+commands:
+  punish:
+    description: "Punishment provided command."
+    usage: "§cUsage: /punish Player message"
+    permission: punishment.admin
+  punishment:
+    description: "Punishment provided command."
+    permission: punishment.admin
